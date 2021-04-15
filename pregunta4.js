@@ -22,7 +22,8 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+    inventors.find(inv => inv.last===inventor).discoveries=discoveries;
+    return inventors;
   }
 
   console.log(addDiscoveries('Einstein', 

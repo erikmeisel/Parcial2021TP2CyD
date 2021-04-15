@@ -3,7 +3,9 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
-    
+    if (nums.lenght<3) return undefined;
+    let aux = [...new Set(nums.sort((a,b) => b - a))];
+    return aux[2];
 }
 
 
